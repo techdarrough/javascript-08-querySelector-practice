@@ -77,18 +77,20 @@ orangeMinusBtn.addEventListener("click", () => {
 });
 
 // 3. Update Fruit Images
-const fruit = document.querySelectorAll("#fruit");
 
-// 3a. Use a For Loop to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
+// 3a. create a new variable and set it equal to a querySelectorAll to select all images with a class of 'fruit'
+const fruitImages = document.querySelectorAll(".fruit");
 
-// for (let i = 0; i < fruit.length; i++) {
-//   fruit[i].style.width = "20vw";
-//   fruit[i].style.height = "20vw";
+// 3b. Use a For Loop to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
+
+// for (let i = 0; i < fruitImages.length; i++) {
+//   fruitImages[i].style.width = "20vw";
+//   fruitImages[i].style.height = "20vw";
 // }
 
-// 3b. Comment out your above for loop, and refactor it with a ForEach higher order function
+// 3c. Comment out your above for loop, and refactor it with a ForEach higher order function
 
-fruit.forEach((i) => {
-  i.style.width = "20vw";
-  i.style.height = "20vw";
+fruitImages.forEach((fruit) => {
+  fruit.style.width = "20vw";
+  fruit.style.height = "20vw";
 });

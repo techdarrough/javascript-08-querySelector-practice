@@ -20,12 +20,14 @@ const applePlusBtn = document.querySelector("#add-apple");
 applePlusBtn.addEventListener("click", function () {});
 
 // Update Fruit Images with Javascript
-const fruit = document.querySelectorAll("#fruit");
 
-// 3a. Use a For Loop to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
+// 3a. create a new variable fruitImages and set it equal to a document.querySelectorAll to select all images with a class of 'fruit'
+const fruitImages // add your querySelectorAll here
+
+// 3b. Use a For Loop to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
 
 // write your for loop here
 
-// 3b. Comment out your above for loop, and refactor it with a ForEach higher order function
+// 3c. Comment out your above for loop, and refactor it with a ForEach higher order function
 
 // write your forEach here
