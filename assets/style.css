@@ -99,3 +99,9 @@ body::after {
   display: block;
   height: 150px;
 }
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

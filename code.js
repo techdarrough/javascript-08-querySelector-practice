@@ -1,33 +1,127 @@
 // The Warm Up
-// 0. Replace this variable with your name
+// 0. Replace the variable 'yourName' with your name
+const credit = document.querySelector("#credit");
 let yourName = "Peter Parker";
 credit.textContent = `Created by ${yourName}`;
 
+// COMPLETE THE HTML
+// 1. Append watermelon, grapes, and strawberries to the menu-container
+// watermelon is done as an example
+let watermelonDiv = document.createElement("div");
+watermelonDiv.innerHTML = `<div class="menu">
+<h3>Watermelon</h3>
+<img class ='fruit' src="assets/images/watermelon.jpeg" alt="watermelon">
+<div class="button-container">
+    <button id="minus-watermelon">-</button>
+    <button id="add-watermelon">+</button>
+</div>
+</div>`;
+
+const menuContainer = document.querySelector(".menu-container");
+menuContainer.appendChild(watermelonDiv);
+
+// 1a. Create divs and append grapes to the page
+// *** type your code here ***
+
+// EDIT THE CSS
+// Update Fruit Images with Javascript
+
+// 2a. create a new variable named fruitImages and set it equal to a document.querySelectorAll to select all images with a class of 'fruit'
+// *** type your code here ***
+
+// 2b. Use a For Loop or forEach higher order function to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
+// *** type your code here ***
+
+// TRACK DATA WITH JAVASCRIPT
 // Data
 let apples = 0;
 let bananas = 0;
 let oranges = 0;
+let watermelon = 0;
+let grapes = 0;
+let strawberries = 0;
 let total = 0;
 
 // Selectors
-// 1. add selectors for each fruit's - and + button
-const credit = document.querySelector("#credit");
+// Selectors for each fruit's - and + button
+// 3a. add querySelectors for grapes and strawberries
 const applePlusBtn = document.querySelector("#add-apple");
+const appleMinusBtn = document.querySelector("#minus-apple");
+const bananaPlusBtn = document.querySelector("#add-banana");
+const bananaMinusBtn = document.querySelector("#minus-banana");
+const orangePlusBtn = document.querySelector("#add-orange");
+const orangeMinusBtn = document.querySelector("#minus-orange");
+const watermelonPlusBtn = document.querySelector("#add-watermelon");
+const watermelonMinusBtn = document.querySelector("#minus-watermelon");
+// *** type your code here ***
+const grandTotalDisplay = document.querySelector("#qty-total");
 
 // +/- Button Event listeners
-// 2a. Add Event Listeners for Each Fruit's - or + sign
-// 2b. Add Javascript that updates each fruit's count and the total count  // hint: textContent
-applePlusBtn.addEventListener("click", function () {});
+// 3b. Add Event Listeners for grapes and strawberries
+applePlusBtn.addEventListener("click", function () {
+  apples++;
+  total = apples + bananas + oranges;
+  applesQuantityDisplay.textContent = apples;
+  grandTotalDisplay.textContent = total;
+});
 
-// Update Fruit Images with Javascript
+appleMinusBtn.addEventListener("click", () => {
+  if (apples > 0) {
+    apples--;
+    total = apples + bananas + oranges;
+    applesQuantityDisplay.textContent = apples;
+    grandTotalDisplay.textContent = total;
+  }
+});
 
-// 3a. create a new variable fruitImages and set it equal to a document.querySelectorAll to select all images with a class of 'fruit'
-const fruitImages // add your querySelectorAll here
+bananaPlusBtn.addEventListener("click", () => {
+  bananas++;
+  total = apples + bananas + oranges;
+  bananasQuantityDisplay.textContent = bananas;
+  grandTotalDisplay.textContent = total;
+});
 
-// 3b. Use a For Loop to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
+bananaMinusBtn.addEventListener("click", () => {
+  if (bananas > 0) {
+    bananas--;
+    total = apples + bananas + oranges + watermelon + grapes + strawberries;
+    bananasQuantityDisplay.textContent = bananas;
+    grandTotalDisplay.textContent = total;
+  }
+});
 
-// write your for loop here
+orangePlusBtn.addEventListener("click", () => {
+  oranges++;
+  total = apples + bananas + oranges + watermelon + grapes + strawberries;
+  orangesQuantityDisplay.textContent = oranges;
+  grandTotalDisplay.textContent = total;
+});
 
-// 3c. Comment out your above for loop, and refactor it with a ForEach higher order function
+orangeMinusBtn.addEventListener("click", () => {
+  if (oranges > 0) {
+    oranges--;
+    total = apples + bananas + oranges + watermelon + grapes + strawberries;
+    orangesQuantityDisplay.textContent = oranges;
+    grandTotalDisplay.textContent = total;
+  }
+});
 
-// write your forEach here
+watermelonPlusBtn.addEventListener("click", () => {
+  watermelon++;
+  total = apples + bananas + oranges + watermelon + grapes + strawberries;
+  watermelonQuantityDisplay.textContent = watermelon;
+  grandTotalDisplay.textContent = total;
+});
+
+watermelonMinusBtn.addEventListener("click", () => {
+  if (watermelon > 0) {
+    watermelon--;
+    total = apples + bananas + oranges + watermelon + grapes + strawberries;
+    watermelonQuantityDisplay.textContent = watermelon;
+    grandTotalDisplay.textContent = total;
+  }
+});
+
+// BONUS: 4. Use the filter higher order function to show the most popular fruit
+let allFruit = [apples, bananas, oranges, watermelon, grapes, strawberries];
+const mostPopularFruit = document.querySelector("#most-popular-fruit");
