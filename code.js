@@ -121,7 +121,3 @@ watermelonMinusBtn.addEventListener("click", () => {
     grandTotalDisplay.textContent = total;
   }
 });
-
-// BONUS: 4. Use the filter higher order function to show the most popular fruit
-let allFruit = [apples, bananas, oranges, watermelon, grapes, strawberries];
-const mostPopularFruit = document.querySelector("#most-popular-fruit");
