@@ -23,6 +23,9 @@ menuContainer.appendChild(watermelonDiv);
 // 1a. Create divs and append grapes to the page
 // *** type your code here ***
 
+// 1b. Create divs and append watermelon to the page
+// *** type your code here ***
+
 // EDIT THE CSS
 // Update Fruit Images with Javascript
 
@@ -44,20 +47,29 @@ let total = 0;
 
 // Selectors
 // Selectors for each fruit's - and + button
-// 3a. add querySelectors for grapes and strawberries
+// plus button
 const applePlusBtn = document.querySelector("#add-apple");
-const appleMinusBtn = document.querySelector("#minus-apple");
 const bananaPlusBtn = document.querySelector("#add-banana");
-const bananaMinusBtn = document.querySelector("#minus-banana");
 const orangePlusBtn = document.querySelector("#add-orange");
-const orangeMinusBtn = document.querySelector("#minus-orange");
 const watermelonPlusBtn = document.querySelector("#add-watermelon");
+// *** type your code here ***
+// minus button
+const appleMinusBtn = document.querySelector("#minus-apple");
+const bananaMinusBtn = document.querySelector("#minus-banana");
+const orangeMinusBtn = document.querySelector("#minus-orange");
 const watermelonMinusBtn = document.querySelector("#minus-watermelon");
+// *** type your code here ***
+// quantity display
+const applesQuantityDisplay = document.querySelector("#qty-apples");
+const bananasQuantityDisplay = document.querySelector("#qty-bananas");
+const orangesQuantityDisplay = document.querySelector("#qty-oranges");
+const watermelonQuantityDisplay = document.querySelector("#qty-watermelon");
 // *** type your code here ***
 const grandTotalDisplay = document.querySelector("#qty-total");
 
 // +/- Button Event listeners
-// 3b. Add Event Listeners for grapes and strawberries
+// 3a. Add Event Listeners for Each Fruit's - or + sign
+// 3b. Add Javascript that updates each fruit's count and the total count  // hint: textContent
 applePlusBtn.addEventListener("click", function () {
   apples++;
   total = apples + bananas + oranges;
@@ -121,3 +133,5 @@ watermelonMinusBtn.addEventListener("click", () => {
     grandTotalDisplay.textContent = total;
   }
 });
+
+// *** type your code here ***
