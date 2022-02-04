@@ -1,7 +1,7 @@
 // The Warm Up
 // 0. Replace the variable 'yourName' with your name
 const credit = document.querySelector("#credit");
-let yourName = "Peter Parker";
+let yourName = "Batman";
 credit.textContent = `Created by ${yourName}`;
 
 // COMPLETE THE HTML
@@ -23,14 +23,44 @@ menuContainer.appendChild(watermelonDiv);
 // 1a. Create divs and append grapes to the page
 // *** type your code here ***
 
+let grapesDiv = document.createElement("div");
+grapesDiv.innerHTML = `<div class="menu">
+<h3>Grapes</h3>
+<img class ='fruit' src="assets/images/grapes.jpeg" alt="grapes">
+<div class="button-container">
+    <button id="minus-grapes">-</button>
+    <button id="add-grapes">+</button>
+</div>
+</div>`;
+menuContainer.appendChild(grapesDiv);
+
 // 1b. Create divs and append watermelon to the page
 // *** type your code here ***
-
+let strawberriesDiv = document.createElement("div");
+strawberriesDiv.innerHTML = `<div class="menu">
+<h3>strawberries</h3>
+<img class ='fruit' src="assets/images/strawberry.jpeg" alt="strawberries">
+<div class="button-container">
+    <button id="minus-strawberries">-</button>
+    <button id="add-strawberries">+</button>
+</div>
+</div>`;
+menuContainer.appendChild(strawberriesDiv);
 // EDIT THE CSS
 // Update Fruit Images with Javascript
 
 // 2a. create a new variable named fruitImages and set it equal to a document.querySelectorAll to select all images with a class of 'fruit'
 // *** type your code here ***
+let fruitImags = document.querySelectorAll(".fruit");
+
+
+
+
+
+fruitImags.forEach((fruit)=>{
+  fruit.style.width = "20vw";
+  fruit.style.height = "20vw";
+}));
 
 // 2b. Use a For Loop or forEach higher order function to change each fruit's width to 20vw & height to 20vw  // hint: style.width = "20vw"
 // *** type your code here ***
@@ -53,6 +83,11 @@ const bananaPlusBtn = document.querySelector("#add-banana");
 const orangePlusBtn = document.querySelector("#add-orange");
 const watermelonPlusBtn = document.querySelector("#add-watermelon");
 // *** type your code here ***
+const grapesPlusBtn = document.querySelector('#add-grape')
+const strawberriesPlusBtn = document.querySelector('#add-strawberry')
+const grapesPlusBtn = document.querySelector('#add-grape')
+
+
 // minus button
 const appleMinusBtn = document.querySelector("#minus-apple");
 const bananaMinusBtn = document.querySelector("#minus-banana");
